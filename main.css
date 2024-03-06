@@ -8,9 +8,6 @@ html, body, h1, h2, h3, ul, ol, li, p, a {
 body {
     background-color: #fff5c7;
 }
-h1 {
-
-}
 h2 {
     font-size: 24px;
 }
@@ -19,16 +16,18 @@ h2 {
     background-color: #d9b721;
     text-decoration: none;
     width: 100%;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
     font-family: Verdana, 'Times New Roman', Times, serif
 }
 .title {
-    float: left;
+    align-self: flex-start;
     color: #fff5c7;
-    
+    justify-content: space-between;
+    padding-left: 15px;
 }
 .nav {
-    float: right;
+    align-self: flex-end;
     color: #fff5c7;
     padding: 0px 36px 0px 10px;
     
@@ -57,7 +56,21 @@ h2 {
     width: 200PX;
     font-size: 16px;
 }
-.card {
+.card h2 {
+    padding: 0px;
+}
+.card p { 
+    font-size: 12PX;
+    padding: 5px;
+}
+ul#flex-container {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+ul li {
     border: #000000 solid 1px;
     border-radius: 5px;
     margin: 10px;
@@ -66,17 +79,9 @@ h2 {
     padding: 15px;
     text-align: left;
     font-family: Verdana, 'Times New Roman', Times, serif
+
 }
-.card h2 {
-    padding: 0px;
-}
-.card p { 
-    font-size: 12PX;
-    padding: 5px;
-}
-.card:last-child {
-    margin-right: 0px;
-}
-.card {
-    float: left;
-}
+ul li:first-child {}
+ul li:nth-child(2) {}
+ul li:nth-child(3) {}
+ul li:last-child {}
